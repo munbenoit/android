@@ -29,13 +29,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinished(ApiResponse coins) {
                 if(coins!= null){
-                    //Log.d("ENDED",""+coins.getData().getCoins().forEach((coin)->{return coin.toString()+" "}););
                     printAll(coins);
                     CoinAdapter cAdapter = new CoinAdapter(new onItemClickCallback() {
                         @Override
                         public void onClick(int position) {
                             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-                            intent.putExtra("position",position);
+                            intent.putExtra("data",coins.getData().getCoins().get(position));
                             startActivity(intent);
                         }
                     },coins);

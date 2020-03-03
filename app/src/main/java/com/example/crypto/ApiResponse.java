@@ -1,11 +1,12 @@
 package com.example.crypto;
 
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ApiResponse {
+public class ApiResponse  {
 
-    public class Data{
+    public class Data {
         protected class Stats{
             private int total;
 
@@ -23,7 +24,7 @@ public class ApiResponse {
             return coins;
         }
 
-        protected class Coin{
+        protected class Coin implements Serializable{
             private int id;
 
             public String getSlug() {
