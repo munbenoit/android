@@ -39,18 +39,11 @@ public class MainActivity extends AppCompatActivity {
                         }
                     },coins);
                     rView.setAdapter(cAdapter);
-                    //text.setText(coins.getData().getCoins().get(0).toString());
                 }
-
-
             }
         });
-
-
-
-
-
     }
+
     protected void printAll(ApiResponse coins){
         for(ApiResponse.Data.Coin coin : coins.getData().getCoins()){
             Log.d(coin.toString(), coin.toString());

@@ -38,7 +38,6 @@ public class CoinAdapter extends RecyclerView.Adapter<CoinAdapter.MyViewHolder> 
         symbol.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("OK","OK");
                 callback.onClick(position);
             }
         });
